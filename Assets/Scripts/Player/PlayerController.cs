@@ -1,3 +1,4 @@
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -17,6 +18,11 @@ public class PlayerController : MonoBehaviour
 
     [Header("Game Screen")]
     public GameObject endScreen;
+
+    [Header("Power-Up Config")]
+    public bool invencible = false;
+
+    public TextMeshPro uiTextPowerUp;
 
     //Privates
     private bool _canRun;
@@ -50,7 +56,10 @@ public class PlayerController : MonoBehaviour
     {
         if (collision.transform.tag == tagToCheckEnemy)
         {
-            endGame();
+            if (!invencible) 
+            {
+                endGame(); 
+            };
         }
     }
 
@@ -76,7 +85,7 @@ public class PlayerController : MonoBehaviour
     #region Power-up
     public void SetPowerUpText(string s)
     {
-        //uiTextPowerUp.text = s;
+        uiTextPowerUp.text = s;
     }
 
     public void PowerUpSpeedUp(float f)
@@ -87,6 +96,11 @@ public class PlayerController : MonoBehaviour
     public void ResetSpeed()
     {
         _currentSpeed = speed;
+    }
+
+    public void SetInvencible(bool b = true)
+    {
+        invencible = b;
     }
 
     #endregion
