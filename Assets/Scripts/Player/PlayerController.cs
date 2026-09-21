@@ -1,3 +1,4 @@
+using DG.Tweening;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -24,6 +25,9 @@ public class PlayerController : MonoBehaviour
 
     public TextMeshPro uiTextPowerUp;
 
+    [Header("Coin setup")]
+    public GameObject coinCollector;
+
     //Privates
     private bool _canRun;
     private Vector3 _pos;
@@ -39,6 +43,7 @@ public class PlayerController : MonoBehaviour
     {
         _startPosition = transform.position;
         ResetSpeed();
+        ResetHeight();
     }
 
     void Update()
@@ -103,5 +108,20 @@ public class PlayerController : MonoBehaviour
         invencible = b;
     }
 
+    public void ChangeHeight(float amount, float duration, float animationDuration, Ease ease)
+    {
+        transform.DOMoveY(_startPosition.y + amount, animationDuration).SetEase(ease);
+        Invoke(nameof(ResetHeight), duration);
+    }
+
+    public void ResetHeight()
+    {
+        transform.DOMoveY(_startPosition.y, .1f);
+    }
+
+    public void ChangeCoinCollectorSize(float amount)
+    {
+        coinCollector.transform.localScale = Vector3.one * amount;
+    }
     #endregion
 }

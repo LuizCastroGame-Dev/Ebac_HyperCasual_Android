@@ -72,7 +72,7 @@ MonoBehaviour:
   timeToHide: 0
   graphicItem: {fileID: 1726304447649166358}
   audioSource: {fileID: 0}
-  duration: 3
+  duration: 0
 --- !u!1 &3823984119453952099
 GameObject:
   m_ObjectHideFlags: 0
