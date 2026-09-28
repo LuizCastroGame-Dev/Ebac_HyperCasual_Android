@@ -23,10 +23,14 @@ public class PlayerController : MonoBehaviour
     [Header("Power-Up Config")]
     public bool invencible = false;
 
+    [Header("Text")]
     public TextMeshPro uiTextPowerUp;
 
     [Header("Coin setup")]
     public GameObject coinCollector;
+
+    [Header("Animation")]
+    public AnimatorManager animatorManager;
 
     //Privates
     private bool _canRun;
@@ -63,9 +67,15 @@ public class PlayerController : MonoBehaviour
         {
             if (!invencible) 
             {
-                endGame(); 
+                moveBack(collision.transform);
+                endGame(AnimatorManager.AnimationType.DEAD); 
             };
         }
+    }
+
+    private void moveBack(Transform t)
+    {
+        t.DOMoveZ(1.5f, .3f).SetRelative();
     }
 
     private void OnTriggerEnter(Collider other)
@@ -76,15 +86,17 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    private void endGame()
+    private void endGame(AnimatorManager.AnimationType animationType = AnimatorManager.AnimationType.IDLE)
     {
         _canRun = false;
         endScreen.SetActive(true);
+        animatorManager.Play(animationType);
     }
 
     public void StartToRun()
     {
         _canRun = true;
+        animatorManager.Play(AnimatorManager.AnimationType.RUN);
     }
 
     #region Power-up
