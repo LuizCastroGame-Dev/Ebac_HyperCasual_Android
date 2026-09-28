@@ -1265,7 +1265,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerController
   target: {fileID: 867998737}
   lerpSpeed: 9
-  speed: 5
+  speed: 7
   tagToCheckEnemy: Enemy
   tagToCheckEndLine: EndLine
   endScreen: {fileID: 1189402078}
@@ -1299,10 +1299,13 @@ MonoBehaviour:
   animatorSetups:
   - type: 0
     trigger: idle
+    speed: 1
   - type: 1
     trigger: run
+    speed: 1
   - type: 2
     trigger: dead
+    speed: 1.5
 --- !u!95 &800346739
 Animator:
   serializedVersion: 7
