@@ -6,13 +6,23 @@ using UnityEngine;
 public class LevelManager : MonoBehaviour
 {
     public Transform container;
+
+    [Header("Lists")]
+
     public List<GameObject> levels;
     public List<LevelPieceBasedSetup> levelPieceBasedSetups;
 
     public float timeBetweenPieces = .3f;
-    [SerializeField] private int _index;
+
+    [Header("Managers")]
+    public ColorManager colorManager;
+
+    //Privates
+    //[SerializeField]
+    private int _index;
     private GameObject _currentLevel;
-    [SerializeField] private List<LevelPieceBase> _spawnedPieces = new List<LevelPieceBase>();
+    //[SerializeField] 
+    private List<LevelPieceBase> _spawnedPieces = new List<LevelPieceBase>();
     private LevelPieceBasedSetup _currSetup;
 
     private void Awake()
@@ -79,7 +89,7 @@ public class LevelManager : MonoBehaviour
             CreateLevelPiece(_currSetup.levelPiecesEnd);
         }
 
-        ColorManager.Instance.ChangeColorByType(_currSetup.artType);
+        colorManager.ChangeColorByType(_currSetup.artType);
     }
     private void CreateLevelPiece(List<LevelPieceBase> list)
     {

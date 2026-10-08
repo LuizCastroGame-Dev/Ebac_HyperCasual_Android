@@ -2104,8 +2104,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: a605ca216ff48804b8f40264fea0349b, type: 2}
   - {fileID: 11400000, guid: a79b77ad327676f44a0c9abd0c265261, type: 2}
   timeBetweenPieces: 0.3
-  _index: 0
-  _spawnedPieces: []
+  colorManager: {fileID: 2112416876}
 --- !u!4 &1814311241
 Transform:
   m_ObjectHideFlags: 0
