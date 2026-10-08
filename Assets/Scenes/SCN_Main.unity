@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 31ed2f30d962a0c43ae93edc6b2ddbc4, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -150,6 +150,7 @@ Transform:
   m_Children:
   - {fileID: 1814311241}
   - {fileID: 1683350453}
+  - {fileID: 2112416875}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &236297107
@@ -2579,6 +2580,68 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2089559322}
   m_CullTransparentMesh: 1
+--- !u!1 &2112416874
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2112416875}
+  - component: {fileID: 2112416876}
+  m_Layer: 0
+  m_Name: ColorManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2112416875
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2112416874}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 175686828}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2112416876
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2112416874}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c148be0d43059e4598c2093855a84bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ColorManager
+  materials:
+  - {fileID: 2100000, guid: 3bed823c4f8806d408c710b3f7f7f292, type: 2}
+  - {fileID: 2100000, guid: 3700b2088d3003b4d95ba6c5e528f403, type: 2}
+  - {fileID: 2100000, guid: 193ab304ed2ffcf47926334e1c05070a, type: 2}
+  - {fileID: 2100000, guid: 55322b21790d8ec4b923ad9635f2fc63, type: 2}
+  colorSetups:
+  - artType: 0
+    colors:
+    - {r: 1, g: 0.47008735, b: 0, a: 0}
+    - {r: 1, g: 0, b: 0.84807265, a: 0}
+    - {r: 0.36212873, g: 0, b: 1, a: 0}
+    - {r: 0, g: 0.75631845, b: 1, a: 0}
+  - artType: 1
+    colors:
+    - {r: 0.3726415, g: 0.5372549, b: 0.92156863, a: 0}
+    - {r: 0.36862746, g: 0, b: 1, a: 0}
+    - {r: 0.83642983, g: 0, b: 1, a: 0}
+    - {r: 0, g: 1, b: 0.41863334, a: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

@@ -22,7 +22,6 @@ public class ArtManager : MonoBehaviour
 
     public ArtSetup GetSetupByType(ArtType artType)
     {
-        //return artSetup.ForEach(i => i.artType = artType);
         return artSetup.Find(i => i.artType == artType);
     }
 }

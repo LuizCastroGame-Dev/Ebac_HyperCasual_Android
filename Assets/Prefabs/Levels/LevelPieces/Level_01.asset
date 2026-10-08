@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7041fd96ba87e5e4e80f0cbe4f04f7a8, type: 3}
   m_Name: Level_01
   m_EditorClassIdentifier: Assembly-CSharp::LevelPieceBasedSetup
-  artType: 1
+  artType: 0
   levelPiecesStart:
   - {fileID: 6590666107728639005, guid: d4e076a74873057418a078154ed12d51, type: 3}
   - {fileID: 8997549927890899438, guid: 93f5afa564a270b44bf4698ee1891320, type: 3}
