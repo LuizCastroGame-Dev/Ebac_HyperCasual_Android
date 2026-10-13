@@ -2108,6 +2108,9 @@ MonoBehaviour:
   - {fileID: 11400000, guid: d920b69d8efaf9f44a006c163652c110, type: 2}
   timeBetweenPieces: 0.3
   colorManager: {fileID: 2112416876}
+  scaleDuration: 0.1
+  scaleTimeBetweenPieces: 0.1
+  ease: 27
 --- !u!4 &1814311241
 Transform:
   m_ObjectHideFlags: 0
