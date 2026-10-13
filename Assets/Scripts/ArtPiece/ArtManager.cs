@@ -9,6 +9,7 @@ public class ArtManager : MonoBehaviour
     {
         TYPE_01,
         TYPE_02,
+        TYPE_03,
         BEACH,
         SNOW
     }

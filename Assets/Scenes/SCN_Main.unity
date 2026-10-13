@@ -2034,6 +2034,8 @@ MonoBehaviour:
     gameObject: {fileID: 9209115599090478777, guid: 6f5161a525397864196c2b66545b2df4, type: 3}
   - artType: 1
     gameObject: {fileID: 4105714725571043983, guid: b5a8990a967ffe240a5a37bdfab848bf, type: 3}
+  - artType: 2
+    gameObject: {fileID: 3356641744753210416, guid: cdd336f1832da404e8bf0a53f400bc89, type: 3}
 --- !u!1 &1742737178
 GameObject:
   m_ObjectHideFlags: 0
@@ -2103,6 +2105,7 @@ MonoBehaviour:
   levelPieceBasedSetups:
   - {fileID: 11400000, guid: a605ca216ff48804b8f40264fea0349b, type: 2}
   - {fileID: 11400000, guid: a79b77ad327676f44a0c9abd0c265261, type: 2}
+  - {fileID: 11400000, guid: d920b69d8efaf9f44a006c163652c110, type: 2}
   timeBetweenPieces: 0.3
   colorManager: {fileID: 2112416876}
 --- !u!4 &1814311241
@@ -2641,6 +2644,12 @@ MonoBehaviour:
     - {r: 0.36862746, g: 0, b: 1, a: 0}
     - {r: 0.83642983, g: 0, b: 1, a: 0}
     - {r: 0, g: 1, b: 0.41863334, a: 0}
+  - artType: 2
+    colors:
+    - {r: 0.13679248, g: 1, b: 0.29238677, a: 0}
+    - {r: 0.91449475, g: 1, b: 0, a: 0}
+    - {r: 1, g: 0, b: 0.63438964, a: 0}
+    - {r: 0.17280519, g: 0, b: 1, a: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
