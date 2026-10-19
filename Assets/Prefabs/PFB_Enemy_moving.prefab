@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2674207797282097842}
   - component: {fileID: 8753077586319557705}
   - component: {fileID: 5800146827946467253}
+  - component: {fileID: 3392100892737843843}
   m_Layer: 0
   m_Name: PFB_Enemy_moving
   m_TagString: Enemy
@@ -127,3 +128,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::MovimentHelper
   positions: []
   duration: 1
+--- !u!114 &3392100892737843843
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7057619428902253116}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a0572c7d69bd3a4a8123f6b1c68ced0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ColorChange
+  meshRenderer: {fileID: 2674207797282097842}
+  duration: 2
+  startColor: {r: 1, g: 1, b: 1, a: 1}
