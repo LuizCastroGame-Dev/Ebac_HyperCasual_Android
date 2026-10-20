@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 290806360137653942}
   - component: {fileID: 7126072529070428705}
   - component: {fileID: 7429635648038872185}
+  - component: {fileID: 7911251443129639357}
   m_Layer: 0
   m_Name: Sphere
   m_TagString: Untagged
@@ -90,6 +91,21 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &7911251443129639357
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2988474925065572086}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a0572c7d69bd3a4a8123f6b1c68ced0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ColorChange
+  meshRenderer: {fileID: 7429635648038872185}
+  duration: 2
+  startColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &7462934651564690620
 GameObject:
   m_ObjectHideFlags: 0
@@ -100,10 +116,10 @@ GameObject:
   m_Component:
   - component: {fileID: 6363199788599838287}
   - component: {fileID: 1221283746702205910}
-  - component: {fileID: 8738290030293099237}
+  - component: {fileID: -2021217696586643019}
   m_Layer: 0
   m_Name: PFB_Coin
-  m_TagString: Untagged
+  m_TagString: CoinCollector
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -145,7 +161,7 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.7
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &8738290030293099237
+--- !u!114 &-2021217696586643019
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -154,11 +170,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 7462934651564690620}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9c2de9f911d1f724c83760b8d2959de1, type: 3}
+  m_Script: {fileID: 11500000, guid: c6c7171fcdd17604fa40a730ca3ac188, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ItemCollactableBase
-  compareTag: CoinCollector
+  m_EditorClassIdentifier: Assembly-CSharp::ItemCollactableCoin
+  compareTag: Player
   particleSystem: {fileID: 0}
   timeToHide: 0
   graphicItem: {fileID: 7462934651564690620}
   audioSource: {fileID: 0}
+  collider: {fileID: 1221283746702205910}
+  collect: 0
+  lerp: 5
+  minDistance: 1

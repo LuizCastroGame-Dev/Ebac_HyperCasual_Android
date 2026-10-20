@@ -16,7 +16,7 @@ public class PlayerController : MonoBehaviour
     public string tagToCheckEndLine = "EndLine";
 
     public static PlayerController Instance;
-
+    
     [Header("Game Screen")]
     public GameObject endScreen;
 
@@ -33,6 +33,7 @@ public class PlayerController : MonoBehaviour
     public AnimatorManager animatorManager;
 
     //Privates
+    [SerializeField] private BounceHelper _bounceHelper;
     private bool _canRun;
     private Vector3 _pos;
     private float _currentSpeed;
@@ -72,6 +73,12 @@ public class PlayerController : MonoBehaviour
                 endGame(AnimatorManager.AnimationType.DEAD); 
             };
         }
+    }
+
+    public void Bounce()
+    {
+        if(_bounceHelper != null)
+            _bounceHelper.Bounce();
     }
 
     private void moveBack(Transform t)

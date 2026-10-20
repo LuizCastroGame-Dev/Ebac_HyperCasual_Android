@@ -151,6 +151,7 @@ Transform:
   - {fileID: 1814311241}
   - {fileID: 1683350453}
   - {fileID: 2112416875}
+  - {fileID: 1377549465}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &236297107
@@ -610,6 +611,7 @@ GameObject:
   - component: {fileID: 772492774}
   - component: {fileID: 772492779}
   - component: {fileID: 772492780}
+  - component: {fileID: 772492781}
   m_Layer: 0
   m_Name: PlayerContainer
   m_TagString: Player
@@ -762,6 +764,22 @@ MonoBehaviour:
   uiTextPowerUp: {fileID: 1413856963}
   coinCollector: {fileID: 604542236}
   animatorManager: {fileID: 800346738}
+  _bounceHelper: {fileID: 772492781}
+--- !u!114 &772492781
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 772492773}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0746dfdf80b01e418821e595c206f94, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BounceHelper
+  scaleDuration: 0.05
+  scaleBounce: 1.2
+  ease: 1
 --- !u!1 &800346736 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 7d47ffcaa39cc9940a57c2354b4a69ad, type: 3}
@@ -1463,6 +1481,54 @@ Transform:
   - {fileID: 1239136401}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1377549464
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1377549465}
+  - component: {fileID: 1377549466}
+  m_Layer: 0
+  m_Name: CoinsAnimatorManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1377549465
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1377549464}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 175686828}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1377549466
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1377549464}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e59c2a5f92f4c504ea4bb5b40df5ecb5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CoinsAnimationManager
+  itens: []
+  scaleDuration: 0.1
+  scaleTimeBetweenPieces: 0.05
+  ease: 27
 --- !u!1 &1413856962
 GameObject:
   m_ObjectHideFlags: 0
@@ -2034,6 +2100,8 @@ MonoBehaviour:
     gameObject: {fileID: 9209115599090478777, guid: 6f5161a525397864196c2b66545b2df4, type: 3}
   - artType: 1
     gameObject: {fileID: 4105714725571043983, guid: b5a8990a967ffe240a5a37bdfab848bf, type: 3}
+  - artType: 2
+    gameObject: {fileID: 3356641744753210416, guid: cdd336f1832da404e8bf0a53f400bc89, type: 3}
 --- !u!1 &1742737178
 GameObject:
   m_ObjectHideFlags: 0
@@ -2103,8 +2171,12 @@ MonoBehaviour:
   levelPieceBasedSetups:
   - {fileID: 11400000, guid: a605ca216ff48804b8f40264fea0349b, type: 2}
   - {fileID: 11400000, guid: a79b77ad327676f44a0c9abd0c265261, type: 2}
+  - {fileID: 11400000, guid: d920b69d8efaf9f44a006c163652c110, type: 2}
   timeBetweenPieces: 0.3
   colorManager: {fileID: 2112416876}
+  scaleDuration: 0.1
+  scaleTimeBetweenPieces: 0.1
+  ease: 27
 --- !u!4 &1814311241
 Transform:
   m_ObjectHideFlags: 0
@@ -2641,6 +2713,12 @@ MonoBehaviour:
     - {r: 0.36862746, g: 0, b: 1, a: 0}
     - {r: 0.83642983, g: 0, b: 1, a: 0}
     - {r: 0, g: 1, b: 0.41863334, a: 0}
+  - artType: 2
+    colors:
+    - {r: 0.13679248, g: 1, b: 0.29238677, a: 0}
+    - {r: 0.91449475, g: 1, b: 0, a: 0}
+    - {r: 1, g: 0, b: 0.63438964, a: 0}
+    - {r: 0.17280519, g: 0, b: 1, a: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
