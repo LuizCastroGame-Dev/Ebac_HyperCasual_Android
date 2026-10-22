@@ -23,7 +23,6 @@ public class ItemCollactableBase : MonoBehaviour
         {
             Collect();
         }
-
     }
 
     protected virtual void Collect()
