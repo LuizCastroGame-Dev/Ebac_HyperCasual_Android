@@ -23,8 +23,11 @@ MonoBehaviour:
   - {fileID: 6590666107728639005, guid: b6b72cab0b8e3e843bd89db8c44c9ce1, type: 3}
   - {fileID: 6590666107728639005, guid: c0f54d66b5f40f047b2701f4990c5c47, type: 3}
   - {fileID: 6590666107728639005, guid: 9d21552db40f98d41bdd3151d4ac3200, type: 3}
+  - {fileID: 6590666107728639005, guid: edd4d0323b2a0384792eb341197f77cf, type: 3}
+  - {fileID: 6590666107728639005, guid: b3356eb1a794c464dbb5bdec18e1f4e6, type: 3}
+  - {fileID: 6590666107728639005, guid: 18a50968366387d4d8fa12df10d7794b, type: 3}
   levelPiecesEnd:
   - {fileID: 6590666107728639005, guid: cf35a94affa6037468d19dc9c0a0b5f2, type: 3}
-  piecesStartNumber: 2
-  piecesNumber: 5
+  piecesStartNumber: 1
+  piecesNumber: 6
   piecesEndNumber: 1
